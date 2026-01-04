@@ -1,6 +1,5 @@
 
 function Welcome(){
-  
     return(
         <>
              <div className="flex justify-center">
