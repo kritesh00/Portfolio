@@ -7,9 +7,10 @@ import './App.css'
 function App() {
   return (
     <>
-    
-      <Hero/>
+      <Nav/>
       <Welcome/>
+      <Hero/>
+     
       <Footer/>
     </>
   )
