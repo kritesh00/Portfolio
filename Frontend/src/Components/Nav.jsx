@@ -6,7 +6,7 @@ function Nav(){
     <div className="flex items-center">
         <a className="text-[#F3F4F4] px-4 py-2 leading-none rounded-full hover:text-[#5F9598]" href="#">Home</a>
         <a className="text-[#F3F4F4] px-4 py-2 leading-none rounded-full hover:text-[#5F9598]" href="#about">About</a>
-        <a className="text-[#F3F4F4] px-4 py-2 leading-none rounded-full hover:text-[#5F9598]" href="#">Contact</a>
+        <a className="text-[#F3F4F4] px-4 py-2 leading-none rounded-full hover:text-[#5F9598]" href="#contact">Contact</a>
     </div>
     </nav>
         </>
