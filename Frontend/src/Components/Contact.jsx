@@ -67,13 +67,13 @@ function Contact(){
       <form className="lg:ml-auto space-y-4">
         <ToastContainer theme='dark'/>
         <input type='text' placeholder='Name'
-          className="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
+          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
         <input type='email' placeholder='Email'
-          className="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
+          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
         <input type='text' placeholder='Subject'
-          className="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
+          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
         <textarea placeholder='Message' rows="6"
-          className="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-sm pt-3 border border-gray-200 focus:border-[#5F9598] outline-none focus:bg-white"></textarea>
+          className="w-full rounded-md px-4 bg-slate-100 text-black text-sm pt-3 border border-gray-200 focus:border-[#5F9598] outline-none focus:bg-white"></textarea>
         <button type='button' onClick={notify}
           className="text-white bg-[#5F9598] hover:bg-slate-800 tracking-wide rounded-md text-sm font-medium px-4 py-3 w-full cursor-pointer !mt-2 border-0">Send message</button>
       </form>
