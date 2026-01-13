@@ -3,8 +3,9 @@ import Nav from './Components/Nav'
 import Hero from './Components/Hero'
 import Footer from './Components/Footer'
 import Contact from './Components/Contact'
-import Technologystack from './Components/Technologystack'
+import Education from './Components/Education'
 import './App.css'
+
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Welcome/>
      
       <Hero/>
+      <Education/>
      <Contact/>
       <Footer/>
     </>
