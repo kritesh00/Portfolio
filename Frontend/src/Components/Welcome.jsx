@@ -5,7 +5,7 @@ function Welcome(){
         <>
        
 
-  <div className="w-300 flex flex-row gap-10 m-15 mt-0  justify-center items-center h-screen " id="cards">
+  <div className="flex flex-wrap justify-center items-center gap-6 px-4 py-10 mx-auto max-w-7xl " id="cards">
     
         <Cards avatar='algo.svg' title="Algorithm Visualizer" description="
         This project helps to visualize different algorithms of DSA. TechStack: React Django Tailwind CSS" link="https://kritesh00.github.io/AlgorithmVisualizer/" />
@@ -21,7 +21,7 @@ function Welcome(){
       </div>
 
       <h1 className=" font-poppins text-center font-bold text-2xl">Familiar With</h1>
-      <div className=" flex flex-row gap-10 m-20 justify-center items-center "id="techno">
+      <div className=" flex flex-wrap gap-10 justify-center items-center m-10 md:m-20"id="techno">
         
     <Technologystack img="html.svg" />
       <Technologystack img="css.svg" />

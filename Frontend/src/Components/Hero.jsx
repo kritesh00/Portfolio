@@ -2,27 +2,26 @@ function Hero(){
     return(
         <>
 
-
-        <div className = ' pt-10 display-flex justify-center align-center h-150 w-150 bg-[#1D546D]/20 rounded-xl border border-white/20 shadow-2xl backdrop-blur-xl mt-10 mx-auto'id="about">
-            <p className='text-center mt-4 font-poppins text-base'>
+        <div className='pt-10 flex flex-col justify-center items-center max-w-4xl bg-[#1D546D]/20 rounded-xl border border-white/20 shadow-2xl backdrop-blur-xl mt-10 mx-auto px-4 pb-10' id="about">
+            <p className='text-center mt-4 font-poppins text-sm sm:text-base px-4'>
                 Hello, I'm Kritesh Bhattarai, a Computer Engineering student with a passion for coding and a deep interest in cybersecurity.
                 <br/>
              🌍 I'm based in Nepal<br/>
             ⚡ I enjoy coding and hunting bugs
             </p>
             
-            <div className="  ml-30 w-96 px-6 py-6  text-center bg-[#1D546D]/10 rounded-lg lg:mt-5 xl:px-10">
+            <div className="mx-auto w-full max-w-sm px-6 py-6 text-center bg-[#1D546D]/10 rounded-lg mt-5 xl:px-10">
                 <div className="space-y-4 xl:space-y-6">
                 <img className="mx-auto rounded-full h-36 w-36" src="avatar.png" alt="author avatar"/>
                 <div className="space-y-2">
                     <div className="flex justify-center items-center flex-col space-y-3 text-lg font-medium leading-6">
                         <h3 className="text-[#F3F4F4]">Kritesh Bhattarai</h3>
-                        <p className="text-[#F3F4F4] ">Student- Computer Engineering</p>
+                        <p className="text-[#F3F4F4]">Student- Computer Engineering</p>
                         
                 <div className="flex justify-center mt-5 space-x-5">
                         <a href="https://www.github.com/kritesh00" target="_blank" rel="noopener noreferrer"
                         className="inline-block text-white-400"><span className="sr-only">GitHub</span><svg stroke="currentColor"
-                            fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                            fill="currentColor" strokeWidth="0" viewBox="0 0 496 512"
                             className="w-6 h-6 text-white-400 hover:text-gray-100" height="1em" width="1em"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -31,7 +30,7 @@ function Hero(){
                         </svg></a>
                     <a href="https://www.linkedin.com/in/kriteshbhattarai/" target="_blank" rel="noopener noreferrer"
                         className="inline-block text-white-400"><span className="sr-only">Linkedin</span><svg
-                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
                             className="w-6 h-6 text-white-400 hover:text-gray-100" height="1em" width="1em"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -47,33 +46,30 @@ function Hero(){
 
         
         </div>
-                <section className="display: flex dark:bg-[#061E29] dark:text-white">
+        
+        <section className="bg-[#061E29] text-white">
 	<div className="container max-w-5xl px-4 py-12 mx-auto">
 		<div className="grid gap-4 mx-4 sm:grid-cols-12">
 			<div className="col-span-12 sm:col-span-3">
-				<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-[#5F9598]">
+				<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#5F9598]">
 					<h3 className="text-3xl font-semibold">Experience</h3>
-					<span className="text-sm font-bold tracking-wider uppercase dark:text-gray-600"></span>
+					<span className="text-sm font-bold tracking-wider uppercase text-gray-600"></span>
 				</div>
 			</div>
 			<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-				<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
-					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-[#5F9598]">
+				<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
+					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#5F9598]">
 						<h3 className="text-xl font-semibold tracking-wide">Postman API Fundamentals Student Expert </h3>
-						<time className="text-xs tracking-wide uppercase dark:text-white-600">March 2025</time>
+						<time className="text-xs tracking-wide uppercase text-gray-400">March 2025</time>
 						<p className="mt-3">I was recognized as Postman API Fundamentals Student Expert after the completion the Postman API Fundamentals course.</p>
 					</div>
-                    <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-[#5F9598]">
+                    <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#5F9598]">
 						<h3 className="text-xl font-semibold tracking-wide">DataFellow @DataCamp </h3>
-						<time className="text-xs tracking-wide uppercase dark:text-white-600">Feb 2025</time>
+						<time className="text-xs tracking-wide uppercase text-gray-400">Feb 2025</time>
 						<p className="mt-3">I was selected for Data-Fellowship at DataCamp program under Sunway Student Representative Council.</p>
 					</div>
-                    
-					
-					
 				</div>
 			</div>
-            
 		</div>
 	</div>
 </section>
