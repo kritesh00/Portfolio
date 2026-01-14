@@ -21,16 +21,14 @@ function Welcome(){
       <h1 className=" font-poppins text-center font-bold text-2xl">Familiar With</h1>
       <div className=" flex flex-row gap-10 m-20 justify-center items-center "id="techno">
         
-    <Technologystack img="src/assets/css.svg" />
-      <Technologystack img="src/assets/js.svg" />
-      <Technologystack img="src/assets/react1.svg"/>
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
-      <Technologystack img="vite.svg" />
+    <Technologystack img="src/assets/html.svg" />
+      <Technologystack img="src/assets/css.svg" />
+      <Technologystack img="src/assets/js.svg"/>
+      <Technologystack img="src/assets/react1.svg" />
+      <Technologystack img="src/assets/git.svg" />
+      <Technologystack img="src/assets/github.svg" />
+      <Technologystack img="src/assets/cpp.svg" />
+      
       </div>
       
         </>

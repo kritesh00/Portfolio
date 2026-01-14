@@ -1,6 +1,52 @@
 import { ToastContainer, toast } from 'react-toastify';
+import { useState } from 'react';
+import "react-toastify/dist/ReactToastify.css";
 function Contact(){
-  const notify = () => toast("Submission Successful!");
+
+    const [text,setText]=useState('');
+    const [email,setEmail]=useState('');
+    const [subject,setSubject]=useState('');
+    const [message,setMessage]=useState('');
+
+  const notify = () => {
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(text.trim() === '' || email.trim() === ''){
+      toast.error('Please fill in the required fields.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+        
+
+    }
+    else if(!nameRegex.test(text)){
+          toast.error('Please enter a valid name.', {
+            position: "top-center",
+            autoClose: 5000,});
+    }
+    else if(!emailRegex.test(email)){
+          toast.error('Please enter a valid email address.', {
+            position: "top-center",
+            autoClose: 5000,});
+          }
+    else{
+    toast.success('Message sent successfully!', {
+      position: "top-center",
+      autoClose: 5000,
+    
+  })
+}
+  setText('');
+  setEmail('');
+  setMessage('');
+  setSubject('');
+  }
     return(
         <>
         <div className="grid lg:grid-cols-2 items-start gap-16 p-6 mx-auto max-w-5xl max-lg:max-w-2xl bg-[#061E29]" id="contact">
@@ -21,7 +67,7 @@ function Contact(){
               </div>
               <a href="javascript:void(0)" className="text-sm ml-4">
                 <small className="block text-slate-900">Mail</small>
-                <spane className="font-semibold text-[#F3F4F4]">kriteshbhattarai617@gmail.com.com</spane>
+                <span className="font-semibold text-[#F3F4F4]">kriteshbhattarai617@gmail.com.com</span>
               </a>
             </li>
           </ul>
@@ -64,15 +110,25 @@ function Contact(){
         </div>
       </div>
 
-      <form className="lg:ml-auto space-y-4">
-        <ToastContainer theme='dark'/>
+      <form className="lg:ml-auto space-y-4" id='form'>
+        <ToastContainer
+        theme='dark'
+        />
         <input type='text' placeholder='Name'
-          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
+          value={text}
+          onChange={(e)=>setText(e.target.value)}
+          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
         <input type='email' placeholder='Email'
+        value={email}
+        onChange={(e)=>setEmail(e.target.value)}
           className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
         <input type='text' placeholder='Subject'
-          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" />
+        value={subject}
+        onChange={(e)=>setSubject(e.target.value)}
+          className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
         <textarea placeholder='Message' rows="6"
+        value={message}
+        onChange={(e)=>setMessage(e.target.value)}
           className="w-full rounded-md px-4 bg-slate-100 text-black text-sm pt-3 border border-gray-200 focus:border-[#5F9598] outline-none focus:bg-white"></textarea>
         <button type='button' onClick={notify}
           className="text-white bg-[#5F9598] hover:bg-slate-800 tracking-wide rounded-md text-sm font-medium px-4 py-3 w-full cursor-pointer !mt-2 border-0">Send message</button>
