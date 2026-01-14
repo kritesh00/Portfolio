@@ -12,7 +12,7 @@ function Hero(){
             
             <div className="mx-auto w-full max-w-sm px-6 py-6 text-center bg-[#1D546D]/10 rounded-lg mt-5 xl:px-10">
                 <div className="space-y-4 xl:space-y-6">
-                <img className="mx-auto rounded-full h-36 w-36" src="avatar.png" alt="author avatar"/>
+                <img className="mx-auto rounded-full h-36 w-36" src="/avatar.png" alt="author avatar"/>
                 <div className="space-y-2">
                     <div className="flex justify-center items-center flex-col space-y-3 text-lg font-medium leading-6">
                         <h3 className="text-[#F3F4F4]">Kritesh Bhattarai</h3>
