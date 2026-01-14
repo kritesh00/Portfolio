@@ -61,7 +61,7 @@ function Hero(){
 					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#5F9598]">
 						<h3 className="text-xl font-semibold tracking-wide">Postman API Fundamentals Student Expert </h3>
 						<time className="text-xs tracking-wide uppercase text-gray-400">March 2025</time>
-						<p className="mt-3">I was recognized as Postman API Fundamentals Student Expert after the completion the Postman API Fundamentals course.</p>
+						<p className="mt-3">I was recognized as Postman API Fundamentals Student Expert after the completion of Postman API Fundamentals course.</p>
 					</div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#5F9598]">
 						<h3 className="text-xl font-semibold tracking-wide">DataFellow @DataCamp </h3>
