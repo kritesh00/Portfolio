@@ -7,4 +7,17 @@ body{
 ::-webkit-scrollbar{
   display: none;
 }
-
+.dark{
+  background-color:#061E29;
+  color: white;
+}
+.light{
+  background-color:#F3F4F4;
+  color: black;
+}
+@media (max-width: 1200px) and (min-width: 300px) {
+  body {
+    display: flex;
+  }
+  
+}

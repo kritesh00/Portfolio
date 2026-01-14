@@ -1,52 +1,66 @@
 import { ToastContainer, toast } from 'react-toastify';
-import { useState } from 'react';
-import "react-toastify/dist/ReactToastify.css";
+import { useState ,useRef} from 'react';
+
+import emailjs from '@emailjs/browser';
 function Contact(){
 
+    const form = useRef();
     const [text,setText]=useState('');
     const [email,setEmail]=useState('');
     const [subject,setSubject]=useState('');
     const [message,setMessage]=useState('');
 
-  const notify = () => {
-    const nameRegex = /^[a-zA-Z\s]+$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(text.trim() === '' || email.trim() === ''){
-      toast.error('Please fill in the required fields.', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        });
-        
+    const sendEmail = (e) => {
+      e.preventDefault();
 
-    }
-    else if(!nameRegex.test(text)){
-          toast.error('Please enter a valid name.', {
-            position: "top-center",
-            autoClose: 5000,});
-    }
-    else if(!emailRegex.test(email)){
-          toast.error('Please enter a valid email address.', {
-            position: "top-center",
-            autoClose: 5000,});
-          }
-    else{
-    toast.success('Message sent successfully!', {
-      position: "top-center",
-      autoClose: 5000,
+  const nameRegex = /^[a-zA-Z\s]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (text.trim()===''|| email.trim()==='' || subject.trim()==='') {
+    toast.error("Please fill in the required fields.");
     
-  })
-}
-  setText('');
-  setEmail('');
-  setMessage('');
-  setSubject('');
   }
+
+  else if (!nameRegex.test(text)) {
+     toast.error('Please enter a valid name.');
+   
+  }
+
+  else if (!emailRegex.test(email)) {
+    toast.error("Please enter a valid email address.");
+    
+  }
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_PUBLIC_KEY
+    )
+    .then(() => {
+      toast.success("Message sent successfully!",{
+          position: "top-center",
+          theme: "dark",
+      });
+      form.current.reset();
+      setText("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    })
+    .catch((error) => {
+      console.error(error);
+      toast.error("Failed to send message. Please try again.",
+        {
+           position: "top-center",
+          theme: "dark",
+          
+        }
+      );
+    });
+}
+    
     return(
         <>
         <div className="grid lg:grid-cols-2 items-start gap-16 p-6 mx-auto max-w-5xl max-lg:max-w-2xl bg-[#061E29]" id="contact">
@@ -65,9 +79,9 @@ function Contact(){
                     data-original="#000000" />
                 </svg>
               </div>
-              <a href="javascript:void(0)" className="text-sm ml-4">
+              <a href="mailto:kriteshbhattarai617@gmail.com" className="text-sm ml-4">
                 <small className="block text-slate-900">Mail</small>
-                <span className="font-semibold text-[#F3F4F4]">kriteshbhattarai617@gmail.com.com</span>
+                <span className="font-semibold text-[#F3F4F4]">kriteshbhattarai617@gmail.com</span>
               </a>
             </li>
           </ul>
@@ -77,7 +91,7 @@ function Contact(){
           <h2 className="text-[#F3F4F4] text-base font-semibold">Socials</h2>
           <ul className="flex mt-4 space-x-4">
             <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="https://www.facebook.com">
+              <a href="https://www.facebook.com/kritesh.bhattarai.33" c>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 24 24">
                   <path
@@ -86,8 +100,8 @@ function Contact(){
                 </svg>
               </a>
             </li>
-            <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="https://www.linkedin.com">
+            <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0 ">
+              <a href="https://www.linkedin.com/in/kriteshbhattarai/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 511 512">
                   <path
@@ -97,7 +111,7 @@ function Contact(){
               </a>
             </li>
             <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="https://www.instagram.com">
+              <a href="https://www.instagram.com/kriteshbhattarai">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 24 24">
                   <path
@@ -110,27 +124,25 @@ function Contact(){
         </div>
       </div>
 
-      <form className="lg:ml-auto space-y-4" id='form'>
-        <ToastContainer
-        theme='dark'
-        />
-        <input type='text' placeholder='Name'
+      <form ref={form} onSubmit={sendEmail} className="lg:ml-auto space-y-4" id='form'>
+        <ToastContainer/>
+        <input type='text' placeholder='Name' name='user_name'
           value={text}
           onChange={(e)=>setText(e.target.value)}
           className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
-        <input type='email' placeholder='Email'
+        <input type='email' placeholder='Email' name='user_email'
         value={email}
         onChange={(e)=>setEmail(e.target.value)}
           className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
-        <input type='text' placeholder='Subject'
+        <input type='text' placeholder='Subject' name='subject'
         value={subject}
         onChange={(e)=>setSubject(e.target.value)}
           className="w-full rounded-md py-3 px-4 bg-slate-100 text-black text-sm border border-white-200 focus:border-[#5F9598] outline-none focus:bg-white" required/>
-        <textarea placeholder='Message' rows="6"
+        <textarea placeholder='Message' rows="6" name='message'
         value={message}
         onChange={(e)=>setMessage(e.target.value)}
-          className="w-full rounded-md px-4 bg-slate-100 text-black text-sm pt-3 border border-gray-200 focus:border-[#5F9598] outline-none focus:bg-white"></textarea>
-        <button type='button' onClick={notify}
+          className="w-full rounded-md px-4 bg-slate-100 text-black text-sm pt-3 border border-gray-200 focus:border-[#5F9598] outline-none focus:bg-white"required></textarea>
+        <button type='submit' onSubmit={sendEmail}
           className="text-white bg-[#5F9598] hover:bg-slate-800 tracking-wide rounded-md text-sm font-medium px-4 py-3 w-full cursor-pointer !mt-2 border-0">Send message</button>
       </form>
     </div>
