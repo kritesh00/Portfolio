@@ -13,13 +13,13 @@ function Education(){
     </li>
     <li className="mb-10 ms-4">
         <div className="absolute w-3 h-3 bg-[#5F9598] rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
-        <time className="text-sm font-normal leading-none text-body">2021</time>
+        <time className="text-sm font-normal leading-none text-body">2023</time>
         <h3 className="text-lg font-semibold text-heading my-2">10+2</h3>
         <p className="text-base font-normal text-body">Completed my 10+2 education from Naya Aayam Multidisciplinary Institute (NAMI) College upholding a 3.40 GPA</p>
     </li>
     <li className="ms-4">
         <div className="absolute w-3 h-3 bg-[#5F9598] rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
-        <time className="mb-1 text-sm font-normal leading-none text-body">2018</time>
+        <time className="mb-1 text-sm font-normal leading-none text-body">2021</time>
         <h3 className="text-lg font-semibold text-heading my-2">SEE</h3>
         <p className="text-base font-normal text-body">Completed my Secondary Education Examination (SEE) from New Buddha Prakash Secondary School with a 3.90 GPA.</p>
     </li>
