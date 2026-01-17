@@ -31,6 +31,9 @@ function Welcome(){
       <Technologystack img="/git.svg" />
       <Technologystack img="/github.svg" />
       <Technologystack img="/cpp.svg" />
+      <Technologystack img="/postman.svg" />
+      <Technologystack img="/python.svg" />
+      <Technologystack img="/tailwind.svg" />
       
       </div>
       </section>
