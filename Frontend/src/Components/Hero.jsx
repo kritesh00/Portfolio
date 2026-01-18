@@ -39,6 +39,10 @@ function Hero(){
                         </svg></a>
                         
                 </div>
+                <a href ="./resume.pdf" download="Kritesh_Bhattarai_Resume.pdf">
+                    <button type="button" className=" cursor-pointer mt-4 px-4 py-2 bg-[#5F9598] text-[#061E29] rounded hover:bg-[#5F9598]/20 hover:text-white">Download Resume</button>
+                </a>
+                
             </div>
         </div>
     </div>
