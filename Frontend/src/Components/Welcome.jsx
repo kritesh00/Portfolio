@@ -16,7 +16,7 @@ function Welcome(){
       </div>
       <div className="flex justify-center gap-2 items-center flex-col mb-10">
       <h1 className="font-bold text-2xl">Check Out</h1>
-      <button className="mt-4 px-4 py-2 bg-[#5F9598]  text-[#061E29]  rounded hover:bg-[#5F9598]/20 hover:text-white"><a href="https://www.github.com/kritesh00">
+      <button className="mt-4 px-4 py-2 bg-[#5F9598]  text-[#061E29]  rounded hover:bg-[#5F9598]/20 hover:text-white"><a href="https://github.com/kritesh00">
         More Projects</a></button>
       </div>
       </section>
