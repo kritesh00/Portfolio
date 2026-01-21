@@ -91,7 +91,7 @@ function Contact(){
           <h2 className="text-[#F3F4F4] text-base font-semibold">Socials</h2>
           <ul className="flex mt-4 space-x-4">
             <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="https://www.facebook.com/kritesh.bhattarai.33" c>
+              <a href="https://facebook.com/kritesh.bhattarai.33" c>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 24 24">
                   <path
@@ -101,7 +101,7 @@ function Contact(){
               </a>
             </li>
             <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0 ">
-              <a href="https://www.linkedin.com/in/kriteshbhattarai/">
+              <a href="https://linkedin.com/in/kriteshbhattarai/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 511 512">
                   <path
@@ -111,7 +111,7 @@ function Contact(){
               </a>
             </li>
             <li className="bg-[#F3F4F4] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="https://www.instagram.com/kriteshbhattarai">
+              <a href="https://instagram.com/kriteshbhattarai">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                   viewBox="0 0 24 24">
                   <path
