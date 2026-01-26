@@ -11,7 +11,7 @@ function Welcome(){
         This project helps to visualize different algorithms of DSA. TechStack: React Django Tailwind CSS" link="https://kritesh00.github.io/AlgorithmVisualizer/" />
         <Cards avatar='/pgame.svg' title="Platform Game" description="In this project I implemented different concepts of Python to make an interactive platform game." link ='https://github.com/kritesh00/CG-Platform-Game' />
         
-        <Cards avatar='/data.svg' title="Customer Segmentation" description="This project is an interactive web application for customer segmentation using K-Means clustering." link ='https://github.com/kritesh00/Customer-Segmentation-Project-Datascience' />
+        <Cards avatar='/data.svg' title="Customer Segmentation" description="This project is an interactive web application for customer segmentation using K-Means clustering." link ='https://customer-segmentation-project-datascience-eqqjdyboks7gnmzknqxl.streamlit.app/' />
         
       </div>
       <div className="flex justify-center gap-2 items-center flex-col mb-10">
